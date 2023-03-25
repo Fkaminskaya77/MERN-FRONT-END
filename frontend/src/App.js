@@ -7,9 +7,11 @@ function App() {
  .then()
   return (
  <div className="App">
-     
+     <div className="background"></div>
     </div>
   );
 }
 
 export default App;
+
+//App.js - import nav bar from components directory & date / time
