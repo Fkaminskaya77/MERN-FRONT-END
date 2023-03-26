@@ -1,3 +1,193 @@
-.background {
-    background-image: url("https://i.imgur.com/nvLA51y.jpg");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+body{
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    background-image: url('./images/bg.jpeg');
+    background-size: cover;
+
+    font-family: 'Roboto', sans-serif;
+    color: #3F3F3F;
+}
+
+.page-title{
+    font-size: 28px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    padding: 30px;
+    border-bottom: 1px solid #b1b1b1;
+}
+
+
+
+
+/* Individual Notes/Tasks ------- */
+
+.content--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 30px;
+    width: 350px;
+    height: 250px;
+    background-color: #ffffff;
+}
+
+.content__title{
+    padding-bottom: 5px;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content__body{
+    line-height: 20px;
+    overflow-y: scroll;
+}
+.content__icons button{
+    border: none;
+    background: none;
+    border: none;
+}
+.content__icons i{
+    margin-right: 20px;
+    font-size: 14px;
+    color: #898989;
+}
+
+.container--container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn--gray{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #313131;
+    color: #bababa;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* ------------------------------ */
+
+
+
+
+
+/* Navbar component ------- */
+
+.navbar--container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-color: #1e1e1e;
+}
+
+.nav-links{
+    margin-top: 75px;
+    list-style: none;
+}
+
+.nav-links__li{
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
+
+.nav-links__li > img{
+    width: 20px;
+    margin-right: 15px;
+}
+
+.nav-links__li > a{
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+.nav-links__li > a:visited{
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+/* ------------------------ */
+
+
+
+
+
+/* Home Component---------- */
+
+.home--page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 200px;
+    text-align: center;
+}
+.home--container > p{
+    text-shadow: 3px 3px 3px #0000003a;
+}
+.home__date{
+    font-size: 28px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+.home__time{
+    font-family: 'Raleway', sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+/* ------------------------ */
+
+
+
+
+
+/* Notes Component -------- */
+
+.notes--page{
+    margin-left: 200px;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #ffffffcb;
+}
+
+/* ------------------------ */
+
+
+/* Tasks Component -------- */
+
+.tasks--page{
+    margin-left: 200px;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #ffffffcb;
+}
+
+.high-urgency{
+    border-top: 3px solid #d83131;
+}
+
+.med-urgency{
+    border-top: 3px solid #f4ee4d;
+}
+
+.low-urgency{
+    border-top: 3px solid #75d741;
+}
+
+/* ------------------------ */
+
+
