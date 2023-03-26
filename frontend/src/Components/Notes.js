@@ -1,17 +1,15 @@
-/*
 import react from 'react';
 
 
 export default function Notes() {
     return (
     <div>
-        <p></p>
+        <button link> NEW NOTE </button>
     </div>
     )
 }
-
-
-Notes - render all notes, button FUNCTION to make a new note
-    ^user clicks new note and they are prompted with an HTML form that is a JSON schema/model that takes the
-    user's note info, stores it (?), and returns it back to the the notes.js page
+/*
+button LINK TO PROMPT HTML FORM TO COLLECT THEIR DATA, SCHEMA MODELS TO STORE IT, AND RETURN IT BY renderimg user's JSON (notes) to the page.
+JSON database for user gets created when they save their first note. otherwise the page displays message saying;
+"oh no you haven't jotted any notes yet, click new note below"
 */
