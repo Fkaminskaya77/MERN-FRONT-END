@@ -22,6 +22,11 @@ body{
     border-bottom: 1px solid #b1b1b1;
 }
 
+
+
+
+/* Individual Notes/Tasks ------- */
+
 .content--container{
     display: flex;
     flex-direction: column;
@@ -54,17 +59,26 @@ body{
     color: #898989;
 }
 
-.high-urgency{
-    border-top: 3px solid #d83131;
+.container--container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.med-urgency{
-    border-top: 3px solid #f4ee4d;
+.btn--gray{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #313131;
+    color: #bababa;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-.low-urgency{
-    border-top: 3px solid #75d741;
-}
+/* ------------------------------ */
+
+
+
+
 
 /* Navbar component ------- */
 
@@ -111,7 +125,7 @@ body{
 
 /* Home Component---------- */
 
-.home--container{
+.home--page{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,16 +156,37 @@ body{
 
 /* Notes Component -------- */
 
-.notes--container{
+.notes--page{
     margin-left: 200px;
     min-height: 100vh;
     height: 100%;
     background-color: #ffffffcb;
 }
 
-.container--flex-content{
-    display: flex;
-    flex-wrap: wrap;
+/* ------------------------ */
+
+
+/* Tasks Component -------- */
+
+.tasks--page{
+    margin-left: 200px;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #ffffffcb;
+}
+
+.high-urgency{
+    border-top: 3px solid #d83131;
+}
+
+.med-urgency{
+    border-top: 3px solid #f4ee4d;
+}
+
+.low-urgency{
+    border-top: 3px solid #75d741;
 }
 
 /* ------------------------ */
+
+
