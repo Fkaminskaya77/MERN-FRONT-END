@@ -3,6 +3,7 @@ import react from 'react';
 
 export default function Notes() {
     Note()
+    //JSON database for user gets created when they save their first note, otherwise the page displays mesage
     return (
     <div>
         <button type="button" onClick="Note"> NEW NOTE </button>
@@ -13,13 +14,30 @@ export default function Notes() {
 function Note() {
     return (
         <div>
-            <h4>NEW NOTE🌟</h4>
+            <header></header>
+
+            <div className='notes'>
+            </div>
+
+            <div className='newNote'>
+                <h1>NEW NOTE🌟</h1>
+                <form>
+                    <input
+                        type = "text"
+                        heading = "heading"
+                        title = "title"
+                        body = "body"
+                    />
+                    <button 
+                        type = "submit"
+                        class = "btn"
+                        onClick = "saveNote(event)"
+                        >
+                    SAVE NOTE
+                    </button>
+                </form>
+            </div>
+
         </div>
     )
 }
-
-/*
-button LINK TO PROMPT HTML FORM TO COLLECT THEIR DATA, SCHEMA MODELS TO STORE IT, AND RETURN IT BY renderimg user's JSON (notes) to the page.
-JSON database for user gets created when they save their first note. otherwise the page displays message saying;
-"oh no you haven't jotted any notes yet, click new note below"
-*/
