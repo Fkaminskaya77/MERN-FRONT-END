@@ -1,9 +1,9 @@
-import react from 'react';
-
+import * as React from 'react';
+import { useState, useEffect } from 'react';
+import axios from "axios";
 
 export default function Notes() {
-    const json = fetch("https://mern-dashboard-grp3.herokuapp.com/notes")
-    Note()
+    GetNotes()
     return (
     <div>
         <button type="button" onClick="Note"> NEW NOTE </button>
@@ -11,53 +11,72 @@ export default function Notes() {
     )
 
 }
-console.log(json)
 
-
-function Note() {
+function newNote () {
     return (
         <div>
-            <header></header>
+        <header></header>
 
-            <div className='notes'>
-            </div>
-
-            <div className='newNote'>
-                <h1>NEW NOTE🌟</h1>
-                <form>
-                    <input
-                        type = "text"
-                        heading = "heading"
-                        title = "title"
-                        body = "body"
-                    />
-                    <button 
-                        type = "submit"
-                        class = "btn"
-                        onClick = "Notes"
-                        >
-                    SAVE NOTE
-                    </button>
-                </form>
-            </div>
-
+        <div className='notes'>
         </div>
+
+        <div className='newNote'>
+            <h1>NEW NOTE🌟</h1>
+            <form>
+                <input
+                    type = "text"
+                    heading = "heading"
+                    title = "title"
+                    body = "body"
+                />
+                <button 
+                    type = "submit"
+                    onClick = "GetNotes"
+                    >
+                SAVE NOTE
+                </button>
+            </form>
+        </div>
+    </div>
+    )
+}
+console.log(newNote);
+
+function GetNotes() {
+    const [posts, setPosts] = useState([ ]);
+
+    useEffect(() => {
+        const JSON = 'https://mern-dashboard-grp3.herokuapp.com/notes';
+        axios.get(JSON)
+//creating an array out of JSON data to map through it/render it on page
+        .then((response) => {
+            console.log("RES", response.data);
+        if(response.data) {
+            console.log(response.data)
+            setPosts(response.data)
+            console.log(setPosts)
+            console.log(typeof posts, posts)
+        }else {
+            console.log("ERROR");
+            }
+        })
+        .catch((error) => {
+            console.log("ERROR", error);
+        });
+        console.log(JSON);
+    }, [])
+
+    return (
+            <div>{post.content}</div>
     )
 }
 
-/*
+const postsRenderer = posts.map((post) => (
+    <div className='post-container' key={post.id}>
+        <a href={post.url_for_post} target="_blank" className='title'>{post.title}</a>
+    <div>{post.content}</div>
+</div>
+));
 
-1.
-*USE MOCK FIRST TO GET COMPONENT WORKING AND TESTED & JSON RENDERED THEN ADD USER INTERACTION W/ BACKEND:
-1. HTML form will be unfunctional - when user clicks submit it will render fake/MOCK JSON to page - not what the user entered saveNote(event) is instead going to invoke the main component rendering fake JSON
-
-
-2. fetch JSON API from the backend. BUT No real USER interaction/data storage/JSON getting from the user to be returned.
-https://mern-dashboard-grp3.herokuapp.com/
-https://mern-dashboard-grp3.herokuapp.com/notes
-https://mern-dashboard-grp3.herokuapp.com/tasks
-3. RENDER MOCK JSON TO PAGE*
-
-2.
-CRUD
-*/
+//3/28 check in with Florense and Margo - 
+//NEXT STEPS: GIT ORIGIN PULL, connect to REACT scripts?, commit & merge what I have done/copy to tasks, margot and florense make final  pulls, i start CRUD
