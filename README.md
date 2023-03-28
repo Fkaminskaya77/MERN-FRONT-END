@@ -1,7 +1,7 @@
 # MERN-FRONT-END
 
 #### THE USER EXPERIENCE - Functionality
-The database brings together information on important Departments that operate America such as laws, and budgets according to the respective departments. I aim to bring in more data and sort it to be more fluid and informational for the average reader.
+
 
 The agency codes are: 
 1. React
