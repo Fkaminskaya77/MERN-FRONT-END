@@ -9,7 +9,7 @@ Technologies Used/how:
 3. 
 
 ### EXAMPLES OF CODE:
-    //SAMPLE DATA from US.GOV on the US Department of Agrigiculture funds according to department
+    //rendering the nav bar to the home/app page
         import "./App.css";
         import Tasks from "./Components/Tasks";
         import Clock from "./Components/homepage";
