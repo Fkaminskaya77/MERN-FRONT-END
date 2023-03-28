@@ -3,10 +3,10 @@
 #### THE USER EXPERIENCE - Functionality
 
 
-The agency codes are: 
-1. React
-2. Node, Express,
-3. axios, and others
+Technologies Used/how: 
+1. React: components and router/links to pages
+2. Node & Expres: connection
+3. 
 
 ### EXAMPLES OF CODE:
     //SAMPLE DATA from US.GOV on the US Department of Agrigiculture funds according to department
