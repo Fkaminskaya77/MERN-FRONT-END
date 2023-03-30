@@ -5,26 +5,40 @@ import Clock from "./Components/homepage.js";
 import React, { useEffect, useState } from "react";
 
 function App() {
-  //API URL From Stranger things Quotes
-  const URL = "https://mern-dashboard-grp3.herokuapp.com/Notes";
+  //API URL 
+  const URLT = "https://mern-dashboard-grp3.herokuapp.com/Tasks";
+  const URLN = "https://mern-dashboard-grp3.herokuapp.com/Notes";
   const [Task, setTask] = useState([]);
+  const [Note, setNote] = useState([]);
 
   //Fetching Data from API
   function getTask() {
-    fetch(URL)
+    fetch(URLT)
       .then((response) => response.json())
-      .then((data) => setTask(data));
+      .then((data) => setTask(data[0]));
   }
   useEffect(getTask, []);
   console.log(Task);
+
+    //Fetching Data from API Notes
+    function getNote() {
+      fetch(URLN)
+        .then((response) => response.json())
+        .then((data) => setNote(data));
+    }
+    useEffect(getNote, []);
+    console.log(Note);
+  
+
 
   return (
     <div className="App">
       <div className="background"></div>
       <Notes />
-      <Tasks />
+      <Tasks Task={Task}/>
       <Clock />
     </div>
   );
 }
 export default App;
+
