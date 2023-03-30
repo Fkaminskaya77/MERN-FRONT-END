@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 
 function App() {
   //API URL From Stranger things Quotes
-  const URL = "https://mern-dashboard-grp3.herokuapp.com/";
+  const URL = "https://mern-dashboard-grp3.herokuapp.com/Notes";
   const [Task, setTask] = useState([]);
 
   //Fetching Data from API
@@ -19,8 +19,8 @@ function App() {
   console.log(Task);
 
   return (
-    <div classname="App">
-      <div classname="background"></div>
+    <div className="App">
+      <div className="background"></div>
       <Notes />
       <Tasks />
       <Clock />
