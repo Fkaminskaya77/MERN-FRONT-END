@@ -56,6 +56,7 @@ function GetNotes() {
             setPosts(response.data)
             console.log(setPosts)
             console.log(typeof posts, posts)
+        
         }else {
             console.log("ERROR");
             }
@@ -67,15 +68,16 @@ function GetNotes() {
     }, [])
 
     return (
-            <div>{post.content}</div>
+            <div>{posts}</div>
     )
+    //error:  Line 68:8:  React Hook useEffect has a missing dependency: 'posts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 }
 
+/*
+//final  pulls/copy to tasks, I start CRUD, they do R Router
 const postsRenderer = posts.map((post) => (
     <div className='post-container' key={post.id}>
         <a href={post.url_for_post} target="_blank" className='title'>{post.title}</a>
     <div>{post.content}</div>
 </div>
-));
-
-//minor changes/fixes needed
+*/
