@@ -6,7 +6,7 @@ import React, {useEffect, useState} from "react";
 
 function App() {
   //API URL From Stranger things Quotes
-  const URL = 'https://mern-dashboard-grp3.herokuapp.com/Tasks';
+  const URL = 'https://mern-dashboard-grp3.herokuapp.com/';
   const [Task, setTask] = useState([])
 
     //Fetching Data from API
