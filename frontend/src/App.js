@@ -1,7 +1,7 @@
 import "./App.css";
 import Tasks from "./Components/Tasks.js";
 import Notes from "./Components/Notes.js";
-// import Clock from "./Components/homepage.js";
+import Clock from "./Components/homepage.js";
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <div classname="background"></div>
       <Notes />
       <Tasks />
-      {/* <Clock /> */}
+      <Clock />
     </div>
   );
 }
