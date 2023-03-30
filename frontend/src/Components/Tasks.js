@@ -1,13 +1,16 @@
 import react from 'react';
 
 
-function Tasks() {
+function Tasks({Task}) {
 
     return(
-        <main className= 'tasks'>
-             <div className="taskPage">
+        <main className= 'tasks--page'>
+             <div className="content--container">
             
-                <h3>PlaceHolder:Title</h3>
+             {Task.map((task, index) => (
+                 <div key={index} className="content--container">
+                
+                <h3 className='content__Title'>{task.title}</h3>
                 <ul>
                     <li></li>
                     <li></li>
@@ -15,11 +18,12 @@ function Tasks() {
                     <li></li>
                 </ul>
                 <p>PlaceHolder:URGENCY</p>
-        
+                </div>
+        ))}
         <div className='content__icons'>
             
-            <button><i class="fa-solid fa-trash"></i></button>
-            <button><i class="fa-regular fa-pen-to-square"></i></button>
+            <button><i className="fa-solid fa-trash"></i></button>
+            <button><i className="fa-regular fa-pen-to-square"></i></button>
             
             <button>NEW TASK +</button>
         </div>
