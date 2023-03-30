@@ -11,8 +11,8 @@ function Notes() {
         
         <div className='content__icons'>
             
-            <button><i class="fa-solid fa-trash"></i></button>
-            <button><i class="fa-regular fa-pen-to-square"></i></button>
+            <button><i className="fa-solid fa-trash"></i></button>
+            <button><i className="fa-regular fa-pen-to-square"></i></button>
             
             <button>NEW NOTE +</button>
         </div>
