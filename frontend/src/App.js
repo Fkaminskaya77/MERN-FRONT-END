@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <div className="background"></div>
-      <Notes />
+      <Notes Note={Note} />
       <Tasks Task={Task} />
       <Clock />
     </div>

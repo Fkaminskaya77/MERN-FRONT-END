@@ -14,6 +14,14 @@ function Tasks({ Task }) {
                     return <li key={index}>{toDos}</li>;
                   })}
                 </ul>
+                <div className="content__icons">
+                  <button>
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
+                  <button>
+                    <i className="fa-regular fa-pen-to-square"></i>
+                  </button>
+                </div>
               </div>
             );
           } else if (task.urgency == "medium") {
@@ -25,6 +33,14 @@ function Tasks({ Task }) {
                     return <li key={index}>{toDos}</li>;
                   })}
                 </ul>
+                <div className="content__icons">
+                  <button>
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
+                  <button>
+                    <i className="fa-regular fa-pen-to-square"></i>
+                  </button>
+                </div>
               </div>
             );
           } else if (task.urgency == "high") {
@@ -36,20 +52,20 @@ function Tasks({ Task }) {
                     return <li key={index}>{toDos}</li>;
                   })}
                 </ul>
+                <div className="content__icons">
+                  <button>
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
+                  <button>
+                    <i className="fa-regular fa-pen-to-square"></i>
+                  </button>
+                </div>
               </div>
             );
           }
         })}
-        <div className="content__icons">
-          <button>
-            <i className="fa-solid fa-trash"></i>
-          </button>
-          <button>
-            <i className="fa-regular fa-pen-to-square"></i>
-          </button>
 
-          <button>NEW TASK +</button>
-        </div>
+        <button>NEW TASK +</button>
       </div>
     </main>
   );
