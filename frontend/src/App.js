@@ -4,7 +4,7 @@ import Notes from "./Components/Notes.js";
 import Clock from "./Components/homepage.js";
 import Navbar from "./Components/Navbar.js";
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   //API URL
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar homeLink="/" notesLink="/notes" tasksLink="/tasks" />
       <Routes>
         <Route path="/" element={<Clock />}></Route>
         <Route path="/notes" element={<Notes Note={Note} />}></Route>
