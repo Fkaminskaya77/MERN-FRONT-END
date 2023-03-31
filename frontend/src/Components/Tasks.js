@@ -8,7 +8,7 @@ function Tasks({ Task }) {
           if (task.urgency == "low") {
             return (
               <div key={index} className="content--container low-urgency">
-                <h3 className="content__Title">{task.title}</h3>
+                <h3 className="content__title">{task.title}</h3>
                 <ul>
                   {task.toDos.map((toDos, index) => {
                     return <li key={index}>{toDos}</li>;

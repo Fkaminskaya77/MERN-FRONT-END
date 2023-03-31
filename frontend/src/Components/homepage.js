@@ -19,9 +19,9 @@ function Clock() {
   setInterval(updateTime, 1000);
 
   return (
-    <div>
-      <h1>{currentDate}</h1>
-      <h1>{currentTime}</h1>
+    <div className="home--page">
+      <p className="home__date">{currentDate}</p>
+      <p className="home__time">{currentTime}</p>
     </div>
   );
 }
