@@ -33,12 +33,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Clock />}></Route>
-        {/* <Notes Note={Note} />
-        <Tasks Task={Task} />
-        <Clock /> */}
+        <Route path="/notes" element={<Notes Note={Note} />}></Route>
+        <Route path="/tasks" element={<Tasks Task={Task} />}></Route>
       </Routes>
     </div>
   );
