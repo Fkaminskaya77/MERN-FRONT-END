@@ -2,7 +2,9 @@ import "./App.css";
 import Tasks from "./Components/Tasks.js";
 import Notes from "./Components/Notes.js";
 import Clock from "./Components/homepage.js";
+import Navbar from "./Components/Navbar.js";
 import React, { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   //API URL
@@ -31,10 +33,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="background"></div>
-      <Notes />
-      <Tasks Task={Task} />
-      <Clock />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Clock />}></Route>
+        <Route path="/notes" element={<Notes Note={Note} />}></Route>
+        <Route path="/tasks" element={<Tasks Task={Task} />}></Route>
+      </Routes>
     </div>
   );
 }
