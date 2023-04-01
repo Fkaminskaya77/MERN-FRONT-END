@@ -2,14 +2,15 @@ import react from "react";
 
 function Tasks({ Task }) {
   return (
-    <main className="tasks--page">
-      <div className="content--container">
+    <main className="page">
+      <h2 className="page__title">Tasks</h2>
+      <div className="container--flex">
         {Task.map((task, index) => {
           if (task.urgency == "low") {
             return (
               <div key={index} className="content--container low-urgency">
                 <h3 className="content__title">{task.title}</h3>
-                <ul>
+                <ul className="content__body">
                   {task.toDos.map((toDos, index) => {
                     return <li key={index}>{toDos}</li>;
                   })}
@@ -27,8 +28,8 @@ function Tasks({ Task }) {
           } else if (task.urgency == "medium") {
             return (
               <div key={index} className="content--container med-urgency">
-                <h3 className="content__Title">{task.title}</h3>
-                <ul>
+                <h3 className="content__title">{task.title}</h3>
+                <ul className='content__body'>
                   {task.toDos.map((toDos, index) => {
                     return <li key={index}>{toDos}</li>;
                   })}
@@ -46,8 +47,8 @@ function Tasks({ Task }) {
           } else if (task.urgency == "high") {
             return (
               <div key={index} className="content--container high-urgency">
-                <h3 className="content__Title">{task.title}</h3>
-                <ul>
+                <h3 className="content__title">{task.title}</h3>
+                <ul className='content__body'>
                   {task.toDos.map((toDos, index) => {
                     return <li key={index}>{toDos}</li>;
                   })}
@@ -65,7 +66,7 @@ function Tasks({ Task }) {
           }
         })}
 
-        <button>NEW TASK +</button>
+        <button className="btn--gray">NEW TASK +</button>
       </div>
     </main>
   );

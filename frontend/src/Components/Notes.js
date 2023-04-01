@@ -2,13 +2,15 @@ import React from "react";
 
 function Notes({ Note }) {
   return (
-    <main className="notes">
-      <div className="notesPage">
+    <main className="page">
+      <h2 className="page__title">Notes</h2>
+      <button className="btn--gray">NEW NOTE +</button>
+      <div className="container--flex">
         {Note.map((note, index) => {
           return (
             <div key={index} className="content--container">
               <h3 className="content__title">{note.title}</h3>
-              <p>{note.body}</p>
+              <p className="content__body">{note.body}</p>
               <div className="content__icons">
                 <button>
                   <i className="fa-solid fa-trash"></i>
@@ -21,7 +23,7 @@ function Notes({ Note }) {
           );
         })}
 
-        <button>NEW NOTE +</button>
+       
       </div>
     </main>
   );
