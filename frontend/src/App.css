@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -14,39 +15,80 @@ body{
     color: #3F3F3F;
 }
 
-.page-title{
+.page__title{
+    margin-left: 25px;
     font-size: 28px;
     font-weight: 200;
     letter-spacing: 3px;
-    padding: 30px;
+    padding: 10px 0;
     border-bottom: 1px solid #b1b1b1;
 }
 
+.page{
+    margin-left: 200px;
+    padding: 1em;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #ffffffcb;
+}
 
+.container--flex{
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.btn--gray{
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 25px;
+    background-color: #313131;
+    color: #bababa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.btn--gray:hover{
+    color: #1e1e1e;
+    background-color: #ffffff;
+}
 
 /* Individual Notes/Tasks ------- */
 
 .content--container{
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin: 30px;
     padding: 30px;
-    width: 350px;
-    height: 250px;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 250px;
+    max-height: 250px;
     background-color: #ffffff;
+    word-break:break-all;
+    filter: drop-shadow(3px 3px 3px #00000012);
 }
 
 .content__title{
-    padding-bottom: 5px;
-    font-size: 18px;
+    padding-bottom: 0.5em;
+    font-size: 1.25rem;
     border-bottom: 1px solid #ccc;
 }
 
 .content__body{
-    line-height: 20px;
+    margin-top: 1em;
+    line-height: 1em;
     overflow-y: scroll;
+}
+.content__icons{
+    position: absolute;
+    margin-bottom: 1em;
+    bottom: 0;
 }
 .content__icons button{
     border: none;
@@ -54,25 +96,27 @@ body{
     border: none;
 }
 .content__icons i{
-    margin-right: 20px;
-    font-size: 14px;
+    margin-right: 1.15em;
+    font-size: 0.75rem;
     color: #898989;
+    cursor: pointer;
+    transition: all 300ms;
 }
+
+.fa-trash:hover{
+    color: #b85050;
+}
+
+.fa-pen-to-square:hover{
+    color: #1e1e1e;
+}
+
 
 .container--container{
     display: flex;
     flex-wrap: wrap;
 }
 
-.btn--gray{
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    background-color: #313131;
-    color: #bababa;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
 
 /* ------------------------------ */
 
@@ -85,14 +129,17 @@ body{
 .navbar--container{
     display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute;
     width: 200px;
     height: 100%;
     background-color: #1e1e1e;
+    -webkit-box-shadow: 10px 0px 15px -7px rgba(0,0,0,0.35);
+    -moz-box-shadow: 10px 0px 15px -7px rgba(0,0,0,0.35);
+    box-shadow: 10px 0px 15px -7px rgba(0,0,0,0.35);
 }
 
 .nav-links{
-    margin-top: 75px;
     list-style: none;
 }
 
@@ -112,10 +159,13 @@ body{
     text-decoration: none;
 }
 
+
 .nav-links__li > a:visited{
     color: hsl(0, 0%, 100%);
     text-decoration: none;
 }
+
+
 
 /* ------------------------ */
 
@@ -134,59 +184,66 @@ body{
     margin-left: 200px;
     text-align: center;
 }
-.home--container > p{
-    text-shadow: 3px 3px 3px #0000003a;
-}
+
 .home__date{
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 600;
     color: #FFFFFF;
+    text-shadow: 3px 3px 3px #0000003a;
 }
 .home__time{
-    font-family: 'Raleway', sans-serif;
-    font-size: 80px;
-    font-weight: 400;
+    font-size: 2.25rem;
+    font-weight: 300;
     color: #FFFFFF;
+    text-shadow: 3px 3px 3px #0000003a
 }
 /* ------------------------ */
 
 
-
-
-
-/* Notes Component -------- */
-
-.notes--page{
-    margin-left: 200px;
-    min-height: 100vh;
-    height: 100%;
-    background-color: #ffffffcb;
-}
-
-/* ------------------------ */
 
 
 /* Tasks Component -------- */
 
-.tasks--page{
-    margin-left: 200px;
-    min-height: 100vh;
-    height: 100%;
-    background-color: #ffffffcb;
-}
-
 .high-urgency{
-    border-top: 3px solid #d83131;
+    border-top: 5px solid #d83131;
 }
 
 .med-urgency{
-    border-top: 3px solid #f4ee4d;
+    border-top: 5px solid #f4ee4d;
 }
 
 .low-urgency{
-    border-top: 3px solid #75d741;
+    border-top: 5px solid #75d741;
 }
 
 /* ------------------------ */
 
+@media screen and (max-width: 600px) {
+    .navbar--container{
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100px;
+    }
+    .nav-links{
+        margin: 0;
+        display: flex;
+    }
+    .nav-links__li{
+        margin: 1em;
+    }
 
+    .page{
+        margin: 0;
+        margin-top: 100px;
+    }
+
+    .home--page{
+        margin: 0;
+    }
+
+    .container--flex{
+        justify-content: center;
+    }
+}
