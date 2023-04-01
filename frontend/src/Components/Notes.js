@@ -1,14 +1,18 @@
 import React from "react";
 import { deleteNote } from "../CRUD/noteFunction.js";
-import noteForm from "./noteForm.js";
+import NoteForm from "./noteForm.js";
 
 function Notes({ Note }) {
   return (
     <main className="page">
       <h2 className="page__title">Notes</h2>
-      <button onClick={() => noteForm} className="btn--gray">
+      <button onClick={() => < NoteForm/>} className="btn--gray">
         NEW NOTE +
       </button>
+      <NoteForm/>
+
+
+
       <div className="container--flex">
         {Note.map((note, index) => {
           return (
