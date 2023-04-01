@@ -1,5 +1,5 @@
 import React from "react";
-import { deleteNote } from "../crudFunctions.js";
+import { deleteNote } from "../CRUD/noteFunction.js";
 
 function Notes({ Note }) {
   return (
