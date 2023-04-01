@@ -1,10 +1,14 @@
 import React from "react";
+import { deleteNote } from "../CRUD/noteFunction.js";
+import noteForm from "./noteForm.js";
 
 function Notes({ Note }) {
   return (
     <main className="page">
       <h2 className="page__title">Notes</h2>
-      <button className="btn--gray">NEW NOTE +</button>
+      <button onClick={() => noteForm} className="btn--gray">
+        NEW NOTE +
+      </button>
       <div className="container--flex">
         {Note.map((note, index) => {
           return (
@@ -12,7 +16,7 @@ function Notes({ Note }) {
               <h3 className="content__title">{note.title}</h3>
               <p className="content__body">{note.body}</p>
               <div className="content__icons">
-                <button>
+                <button onClick={() => deleteNote(note._id)}>
                   <i className="fa-solid fa-trash"></i>
                 </button>
                 <button>
@@ -22,8 +26,6 @@ function Notes({ Note }) {
             </div>
           );
         })}
-
-       
       </div>
     </main>
   );

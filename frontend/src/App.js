@@ -6,7 +6,6 @@ import Navbar from "./Components/Navbar.js";
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
-
 function App() {
   //API URL
   const URLT = "https://mern-dashboard-grp3.herokuapp.com/Tasks";
@@ -21,7 +20,7 @@ function App() {
       .then((data) => setTask(data));
   }
   useEffect(getTask, []);
-  console.log(Task);
+  //console.log(Task);
 
   //Fetching Data from API Notes
   function getNote() {
@@ -30,10 +29,9 @@ function App() {
       .then((data) => setNote(data));
   }
   useEffect(getNote, []);
-  console.log(Note);
+  //console.log(Note);
 
   return (
-
     <div className="App">
       <Navbar homeLink="/" notesLink="/notes" tasksLink="/tasks" />
       <Routes>
@@ -41,7 +39,6 @@ function App() {
         <Route path="/notes" element={<Notes Note={Note} />}></Route>
         <Route path="/tasks" element={<Tasks Task={Task} />}></Route>
       </Routes>
-
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import react from "react";
+import { deleteTask } from "../CRUD/taskFunction.js";
 
 function Tasks({ Task }) {
   return (
@@ -16,7 +17,7 @@ function Tasks({ Task }) {
                   })}
                 </ul>
                 <div className="content__icons">
-                  <button>
+                  <button onClick={() => deleteTask(task._id)}>
                     <i className="fa-solid fa-trash"></i>
                   </button>
                   <button>
@@ -29,13 +30,13 @@ function Tasks({ Task }) {
             return (
               <div key={index} className="content--container med-urgency">
                 <h3 className="content__title">{task.title}</h3>
-                <ul className='content__body'>
+                <ul className="content__body">
                   {task.toDos.map((toDos, index) => {
                     return <li key={index}>{toDos}</li>;
                   })}
                 </ul>
                 <div className="content__icons">
-                  <button>
+                  <button onClick={() => deleteTask(task._id)}>
                     <i className="fa-solid fa-trash"></i>
                   </button>
                   <button>
@@ -48,13 +49,13 @@ function Tasks({ Task }) {
             return (
               <div key={index} className="content--container high-urgency">
                 <h3 className="content__title">{task.title}</h3>
-                <ul className='content__body'>
+                <ul className="content__body">
                   {task.toDos.map((toDos, index) => {
                     return <li key={index}>{toDos}</li>;
                   })}
                 </ul>
                 <div className="content__icons">
-                  <button>
+                  <button onClick={() => deleteTask(task._id)}>
                     <i className="fa-solid fa-trash"></i>
                   </button>
                   <button>
