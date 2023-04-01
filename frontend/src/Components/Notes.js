@@ -1,4 +1,5 @@
 import React from "react";
+import { deleteNote } from "../crudFunctions.js";
 
 function Notes({ Note }) {
   return (
@@ -12,7 +13,7 @@ function Notes({ Note }) {
               <h3 className="content__title">{note.title}</h3>
               <p className="content__body">{note.body}</p>
               <div className="content__icons">
-                <button>
+                <button onClick={() => deleteNote(note._id)}>
                   <i className="fa-solid fa-trash"></i>
                 </button>
                 <button>
@@ -22,8 +23,6 @@ function Notes({ Note }) {
             </div>
           );
         })}
-
-       
       </div>
     </main>
   );
