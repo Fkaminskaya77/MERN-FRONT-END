@@ -4,34 +4,24 @@ import { useState } from "react";
 
 function NoteForm() {
   // console.log("Form");
-  const [open,setOpen] = useState(false)
-  const styles = {
-    popup:{
-      display: open ? "flex" : "none",
-      opacity: open ? "1" : "0",
-    }
+  const [closeForm, setCloseForm] = useState(true);
+  const handleNewCloseClick = () => {
+    setCloseForm(false);
   };
-  // <div className="main">
-  //     <button className="open_button" onClick={()=>{setOpen(true)}}>Open!</button>
-    
-       
 
-  //     </div>
-   
  
- 
- 
-  return (
+  {closeForm && (
+    
     <div>
-      <form style = {styles.popup}>
+      <form>
 
         <input type="text" placeholder="title"></input>
         <textarea></textarea>
-        <button className="close_button" onClick={()=>{setOpen(false)}}>Close!</button>
+        <button className="close_button" onClick={handleNewCloseClick}>Close!</button>
         <button>Submit</button>
       </form>
-    </div>
-  );
+    </div> 
+  )};
 }
 
 export default NoteForm;

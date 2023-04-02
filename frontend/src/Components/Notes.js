@@ -1,15 +1,21 @@
 import React from "react";
 import { deleteNote } from "../CRUD/noteFunction.js";
 import NoteForm from "./noteForm.js";
+import { useState } from "react";
 
 function Notes({ Note }) {
+  const [showForm, setShowForm] = useState(false);
+  const handleNewNoteClick = () => {
+    setShowForm(true);
+  };
+
   return (
     <main className="page">
       <h2 className="page__title">Notes</h2>
-      <button onClick={() => < NoteForm/>} className="btn--gray">
+      <button onClick= {handleNewNoteClick} className="btn--gray">
         NEW NOTE +
       </button>
-      <NoteForm/>
+     {showForm && <NoteForm/>}
 
 
 
