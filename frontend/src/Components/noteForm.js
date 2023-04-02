@@ -1,30 +1,34 @@
 import React from "react";
 import { useState } from "react";
+import { postNote } from "../CRUD/noteFunction.js";
  
 
 function NoteForm({handleBtnClick}) {
-  // const url = ""
+  const url = ""
 const [data, setData] = useState({
   title: "",
   body:"",
 })
 
-function handleChange(e) {
-const newData = {...data}
-newData[e.target.id] = e.target.value
-setData(newData)
-console.log(newData)
-}
+// function handleChange(e) {
+//   const newData = {...data}
+//   newData[e.target.id] = e.target.value
+//   setData(newData)
+//   console.log(newData)
+// }
+
+// onChange={(e)=> handleChange(e)}
+// onChange={(e)=> handleChange(e)}
 
 return(
     
     <div>
-      <form>
+      <form onSubmit={postNote(data.title, data.body)}>
 
-        <input onChange={(e)=> handleChange(e)} id="title" value={data.title} type="text" placeholder="title"></input>
-        <textarea onChange={(e)=> handleChange(e)} id="body" value={data.body} placeholder= "Add your note here.."></textarea>
+        <input  id="title" value={data.title} type="text" placeholder="title"></input>
+        <textarea  id="body" value={data.body} placeholder= "Add your note here.."></textarea>
         <button className="close_button" onClick={handleBtnClick}>x</button>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div> 
   );
