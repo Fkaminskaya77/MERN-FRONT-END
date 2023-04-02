@@ -6,7 +6,7 @@ import { useState } from "react";
 function Notes({ Note }) {
   const [showForm, setShowForm] = useState(false);
   const handleNewNoteClick = () => {
-    setShowForm(true);
+    showForm ? setShowForm(false) : setShowForm(true);
   };
 
   return (
@@ -15,7 +15,7 @@ function Notes({ Note }) {
       <button onClick= {handleNewNoteClick} className="btn--gray">
         NEW NOTE +
       </button>
-     {showForm && <NoteForm/>}
+     {showForm && <NoteForm handleBtnClick={handleNewNoteClick}/>}
 
 
 
