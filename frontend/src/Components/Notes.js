@@ -18,7 +18,6 @@ function Notes({ Note }) {
      {showForm && <NoteForm handleBtnClick={handleNewNoteClick}/>}
 
 
-
       <div className="container--flex">
         {Note.map((note, index) => {
           return (
