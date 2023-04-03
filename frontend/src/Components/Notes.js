@@ -15,7 +15,7 @@ function Notes({ Note }) {
       <button onClick= {handleNewNoteClick} className="btn--gray">
         NEW NOTE +
       </button>
-     {showForm && <PostNoteForm handleBtnClick={handleNewNoteClick}/>}
+     {showForm && <NoteForm handleBtnClick={handleNewNoteClick}/>}
 
       <div className="container--flex">
         {Note.map((note, index) => {
