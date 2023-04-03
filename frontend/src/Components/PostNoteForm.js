@@ -3,7 +3,7 @@ import { useState } from "react";
 import { postNote } from "../CRUD/noteFunction.js";
  
 
-function NoteForm({handleBtnClick}) {
+function PostNoteForm({handleBtnClick}) {
   const [data, setData] = useState({
   title: "",
   body: "",
@@ -32,4 +32,4 @@ return(
   );
 }
 
-export default NoteForm;
+export default PostNoteForm;
