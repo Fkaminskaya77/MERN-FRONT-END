@@ -17,6 +17,6 @@ STEPS/ASSIGNMENTS
 
 5^^) SET UP REACT ROUTER - Florense, Margo, Erione			
 
-6) CRUD (Create Read Update Delete) - Trey w/ team help
+6) CRUD (Create Read Update Delete) - Trey backend, Florense, Margo, and Erione front end
 
 7) PLANNING: BACKEND README - Trey	PLANNING DIRECTORY - Trey	FRONTEND README - Florense
