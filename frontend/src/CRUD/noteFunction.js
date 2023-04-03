@@ -15,16 +15,25 @@ export function deleteNote(id) {
 }
 
 
-export function postNote(id) {
+
+export function postNote(e, noteTitle, noteBody) {
+  e.preventDefault();
   //console.log(id);
   fetch("https://mern-dashboard-grp3.herokuapp.com/notes/", {
     method: "POST",
+    headers: {'Content-Type': "application/json"},
+    body: JSON.stringify({
+      title: noteTitle,
+      body: noteBody
+    })
+
   })
     .then((res) => {
       if (!res.ok) {
         throw new Error("Something went wrong");
       }
     })
-    .catch((id) => console.log(id));
-  window.location.reload();
+
+    .then(() => window.location.reload());
+
 }
