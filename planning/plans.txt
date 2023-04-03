@@ -1,0 +1,22 @@
+
+STEPS/ASSIGNMENTS
+
+1) SETTING UP BACKEND CONNECTION (incl. Deploying to Heroku) & SETTING UP DATA IN THE BACKEND - MODEL/SCHEMAS for USER INPUT - Erione w/ team help
+
+2) CSS POSITIONING AND STYLING - Erione		
+
+3) REACT COMPONENTS (App, Nav, basic layout of page components) Florense, Margot, and Trey	
+
+4^^) "GET" USER DATA (in frontend) from our JSON (in backend) and render to page - Florense, Margot, Erione, Trey
+    1. HTML form will functional mimicking the user storage process - when user clicks submit it will render mock JSON to page - not what the user entered.
+    2. fetch JSON API from the backend. BUT No real USER interaction/data storage/JSON getting from the user to be returned.
+    https://mern-dashboard-grp3.herokuapp.com/
+    https://mern-dashboard-grp3.herokuapp.com/notes
+    https://mern-dashboard-grp3.herokuapp.com/tasks
+    3. RENDER MOCK JSON TO PAGE
+
+5^^) SET UP REACT ROUTER - Florense, Margo, Erione			
+
+6) CRUD (Create Read Update Delete) - Trey w/ team help
+
+7) PLANNING: BACKEND README - Trey	PLANNING DIRECTORY - Trey	FRONTEND README - Florense
