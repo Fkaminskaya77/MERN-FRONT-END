@@ -1,6 +1,7 @@
 import React from "react";
 import { deleteNote } from "../CRUD/noteFunction.js";
-import NoteForm from "./noteForm.js";
+import PostNoteForm from "./PostNoteForm.js";
+import EditNoteForm from "./editNoteForm.js"
 import { useState } from "react";
 
 function Notes({ Note }) {
@@ -15,8 +16,8 @@ function Notes({ Note }) {
       <button onClick= {handleNewNoteClick} className="btn--gray">
         NEW NOTE +
       </button>
-     {showForm && <NoteForm handleBtnClick={handleNewNoteClick}/>}
-
+     {showForm && <PostNoteForm handleBtnClick={handleNewNoteClick}/>}
+     {showForm && <EditNoteForm handleBtnClick={handleNewNoteClick}/>}
 
 
       <div className="container--flex">
@@ -29,7 +30,7 @@ function Notes({ Note }) {
                 <button onClick={() => deleteNote(note._id)}>
                   <i className="fa-solid fa-trash"></i>
                 </button>
-                <button>
+                <button onClick={() => EditNoteForm(note._id)}>
                   <i className="fa-regular fa-pen-to-square"></i>
                 </button>
               </div>
