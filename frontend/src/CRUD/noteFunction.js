@@ -15,6 +15,7 @@ export function deleteNote(id) {
 }
 
 
+
 export function postNote(e, noteTitle, noteBody) {
   e.preventDefault();
   //console.log(id);
@@ -25,12 +26,14 @@ export function postNote(e, noteTitle, noteBody) {
       title: noteTitle,
       body: noteBody
     })
+
   })
     .then((res) => {
       if (!res.ok) {
         throw new Error("Something went wrong");
       }
     })
+
     .then(() => window.location.reload());
 
 }
